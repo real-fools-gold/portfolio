@@ -224,12 +224,16 @@ h2 em {
   white-space: nowrap;
 }
 .marquee div {
+  display: flex;
   width: max-content;
   color: #d8d4fe;
   font-size: 18px;
   font-weight: 600;
   letter-spacing: -0.04em;
   animation: marquee 25s linear infinite;
+}
+.marquee-group {
+  flex: none;
 }
 .marquee b {
   color: var(--accent);
@@ -238,7 +242,7 @@ h2 em {
 }
 @keyframes marquee {
   to {
-    transform: translateX(-33%);
+    transform: translateX(-50%);
   }
 }
 .work {
