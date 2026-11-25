@@ -375,7 +375,7 @@ h2 em {
   padding-top: 28vh;
 }
 .scrub-copy {
-  color: #fff
+  color: #fff;
   margin: 0;
   font-size: clamp(2rem, 3.8vw, 4.7rem);
   line-height: 1;
