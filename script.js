@@ -10,3 +10,23 @@ if (window.gsap && window.ScrollTrigger) {
   copy.innerHTML = copy.textContent.trim().split(/\s+/).map(word => `<span>${word}</span>`).join(' ');
   gsap.to('.scrub-copy span', { color: '#f1efe8', stagger: 0.05, scrollTrigger: { trigger: copy, start: 'top 75%', end: 'bottom 45%', scrub: true } });
 }
+
+(function () {
+  const track = document.querySelector('.marquee div');
+  if (!track) return;
+  const unit = track.querySelector('.marquee-group').outerHTML;
+  const fill = () => {
+    const group = document.createElement('span');
+    group.className = 'marquee-group';
+    group.innerHTML = unit;
+    track.textContent = '';
+    track.append(group);
+    const copies = Math.max(1, Math.ceil(window.innerWidth / group.offsetWidth));
+    if (copies > 1) group.innerHTML = unit.repeat(copies);
+    const clone = group.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    track.append(clone);
+  };
+  fill();
+  window.addEventListener('resize', fill);
+})();
