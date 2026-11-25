@@ -375,13 +375,14 @@ h2 em {
   padding-top: 28vh;
 }
 .scrub-copy {
+  color: #aeb3b8
   margin: 0;
   font-size: clamp(2rem, 3.8vw, 4.7rem);
   line-height: 1;
   letter-spacing: -0.06em;
 }
 .scrub-copy span {
-  color: #aeb3b8;
+  color: #fff;
 }
 .methods {
   border-top: 1px solid #aeb3b8;
