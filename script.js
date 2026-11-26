@@ -8,7 +8,7 @@ if (window.gsap && window.ScrollTrigger) {
   ScrollTrigger.matchMedia({ '(min-width: 801px)': () => ScrollTrigger.create({ trigger: '.statement', start: 'top top+=80', end: 'bottom bottom-=120', pin: '.statement-pin', pinSpacing: false }) });
   const copy = document.querySelector('.scrub-copy');
   copy.innerHTML = copy.textContent.trim().split(/\s+/).map(word => `<span>${word}</span>`).join(' ');
-  gsap.to('.scrub-copy span', { color: '#27272a', stagger: 0.05, scrollTrigger: { trigger: copy, start: 'top 75%', end: 'bottom 45%', scrub: true } });
+  gsap.to('.scrub-copy span', { color: '#f1efe8', stagger: 0.05, scrollTrigger: { trigger: copy, start: 'top 75%', end: 'bottom 45%', scrub: true } });
 }
 
 (function () {
