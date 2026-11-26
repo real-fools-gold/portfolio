@@ -316,7 +316,7 @@ h2 em {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  
+
   transition:
     transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
     filter 0.8s;
@@ -345,6 +345,7 @@ h2 em {
 }
 .project-info {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 14px 6px 0;
   color: var(--muted);
@@ -358,6 +359,16 @@ h2 em {
 .project-info b {
   color: #c4b5fd;
   font-size: 14px;
+}
+.project-note {
+  flex-basis: 100%;
+  margin: 6px 0 0;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+.project-note b {
+  color: var(--accent);
+  margin: 0 4px;
 }
 .statement {
   background: var(--surface);
