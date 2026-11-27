@@ -1,4 +1,6 @@
-if (window.gsap && window.ScrollTrigger) {
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (window.gsap && window.ScrollTrigger && !prefersReducedMotion) {
   gsap.registerPlugin(ScrollTrigger);
   gsap.from('.nav, .location, .hero-title, .hero-bottom', { y: 28, autoAlpha: 0, duration: 1, ease: 'power3.out', stagger: 0.1 });
   gsap.from('.hero-image', { clipPath: 'inset(0 100% 0 0)', duration: 1.35, ease: 'power4.inOut', delay: 0.25 });
